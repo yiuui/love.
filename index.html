@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>一些藏在心里的话</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+      @font-face {
+        font-family: digit;
+        src: url('digital-7_mono.ttf') format("truetype");
+      }
+    </style>
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+  </head>
+
+  <body>
+    <div id="mainDiv">
+      <div id="content">
+        <div id="code">
+          <br />
+          <br />
+          <div class="keyword">
+            &nbsp;&nbsp;&nbsp;&nbsp;这也可能是我最牛逼的一次了居然来找你了哈哈哈，要耐心看完哈。你知道吗在我刚上初中的时候我是很好奇的因为能认识新同学，但是又会害怕那时的我还比较社恐，初一的时候刚进到那个课室起就很想回家，但从我不知道什么时候看到了你就没有了这样的想发，这可能就是一见钟情吧现在这么一想我只能说6。当时应该是手机上表的白然后不知道怎么的就成了，中间的事太多我自己也记不住了。
+          </div><br /><br />
+          <div class="keyword">
+            &nbsp;&nbsp;&nbsp;&nbsp;OK！重点来了，你12月28号<晚上来找我了>意思就是说<你跑到我梦里了给我吓的不清搞的我整个身体都在颤抖，你 &#128516;>
+                梦到了什么我这里保密别好奇。想想初中到现在应该也有个三四年了吧，以前的我是单纯的喜欢你，单纯到连嘴都不敢亲哈哈哈！我先说明一下现在的我虽然还是喜欢你，但却不是一定要把你得到。意思就是“我喜欢一朵花，未必要把它摘下来”“我喜欢风，但不一定要叫它停下来让我闻一闻”你只要记住有一个傻逼以前也很喜欢你（名字叫黄勇涛！）。
+                以后没什么事我也不会打扰你了，想删了我记得跟我说要是偷偷删了的话小心我去你家扁你！ 以前的我太笨了没做好男友的职责，对不起！最后弥补一下以前没说过的话“张玲我爱你” ！
+          </div>
+
+
+        </div>
+        <div id="loveHeart">
+          <canvas id="garden"></canvas>
+          <div id="words">
+            <div id="messages">
+              慕然回首，已经记不清我们错过了多少个日月了 &#128524;
+
+            </div>
+            <div id="loveu">
+              &nbsp;&nbsp;&nbsp;&nbsp;愿将来回首，能见想见之人<br />能听想听之声<br />
+              <div class="signature">黄勇涛</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="copyright">
+
+      </div>
+    </div>
+    <script type="text/javascript">
+      var offsetX = $("#loveHeart").width() / 2;
+      var offsetY = $("#loveHeart").height() / 2 - 55;
+      var together = new Date();
+      together.setFullYear(2016, 0, 1);
+      together.setHours(10);
+      together.setMinutes(0);
+      together.setSeconds(0);
+      together.setMilliseconds(0);
+
+      if (!document.createElement('canvas').getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none")
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+      } else {
+        setTimeout(function() {
+          startHeartAnimation();
+        }, 5000);
+
+        timeElapse(together);
+        setInterval(function() {
+          timeElapse(together);
+        }, 500);
+
+        adjustCodePosition();
+        $("#code").typewriter();
+      }
+    </script>
+  </body>
+</html>
